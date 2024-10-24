@@ -1,1 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    flex: 1; /* This will allow the sections to grow and shrink */
+}
+
+/* Section titles */
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00; /* Change to your preferred color */
+    padding: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .section {
+        flex: 0 0 100%; /* Full width for mobile */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        flex: 0 0 50%; /* Two sections in a row on tablet */
+    }
+
+    #sushi {
+        flex: 0 0 100%; /* Third section takes full width */
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        flex: 0 0 33.33%; /* Three sections in a row on desktop */
+    }
+}
 
